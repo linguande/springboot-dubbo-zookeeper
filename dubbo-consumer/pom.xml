@@ -37,6 +37,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- spring热部署 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+            <version>1.2.6.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>com.lgd</groupId>
             <artifactId>dubbo-api</artifactId>
@@ -80,6 +87,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

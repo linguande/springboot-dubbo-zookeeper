@@ -1,7 +1,7 @@
 package com.lgd.dubboconsumer.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.lgd.dubboapi.service.DemoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,15 +17,17 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class DemoController {
 
-    @Autowired
+    /*@Autowired 用于xml配置注入*/
+    @Reference //注解方式
     private DemoService demoService;
 
     @RequestMapping(value="sayHello")
     @ResponseBody
-    public void sayHello(HttpServletRequest request, HttpServletResponse response){
-        String string = "hello";
-        System.out.println("consumer:"+string);
-        demoService.sayHello(string);
+    public String sayHello(HttpServletRequest request, HttpServletResponse response){
+        String string = "consumer : hello";
+        System.out.println(string);
+        string = string + "<br>" + demoService.sayHello("hello");
+        return string;
     }
 
 
