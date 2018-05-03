@@ -36,16 +36,17 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- spring热部署 -->
         <dependency>
-            <groupId>com.lgd</groupId>
-            <artifactId>dubbo-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>springloaded</artifactId>
+            <version>1.2.6.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>com.lgd</groupId>
             <artifactId>dubbo-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>

@@ -1,12 +1,15 @@
 package com.lgd.dubboprovide.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.lgd.dubboapi.service.DemoService;
-import org.springframework.stereotype.Service;
 
 @Service
+//此service注解为com.alibaba.dubbo.config.annotation.Service，并非spring注解
 public class DemoServiceImpl implements DemoService {
     @Override
-    public void sayHello(String string) {
-        System.out.println("provide:"+string);
+    public String sayHello(String string) {
+        String str = "provider :" + string;
+        System.out.println(str);
+        return str;
     }
 }
