@@ -1,11 +1,18 @@
 # springboot-dubbo-zookeeper
 
-1.SpringBoot+Dubbo+Zookeeper整合的demo，提供Zookeeper解压包下载，解压完成后运行/bin/zkServer.cmd即可。
+采用了两种不同的方法赖整合dubbo，第一种直接通过xml配置直接整合dubbo，第二种方式则是依赖spring-boot-starter-dubbo，免去了xml配置。
 
-2.Dubbo采取了两种不同的配置方式，基于xml配置和注解配置。
+其中接口部分也分离了出来，通过maven引入，免去了服务提供者和消费者的重复编码。
 
--------------------------------------------------------------------------------------------------------------------------------------------
-
-1.Demo of SpringBoot Dubbo Zookeeper integration, provide the download of Zookeeper decompression package, and run /bin/ zkserver.cmd after the decompression is completed.
-
-2.Dubbo takes two different configuration approaches, based on XML configuration and annotation configuration.
+1.引入dubbo依赖
+    `<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
+    </dependency>`
