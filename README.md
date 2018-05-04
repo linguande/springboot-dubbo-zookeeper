@@ -134,6 +134,7 @@ server.port=8012
 10.至此dubbo已经整合完毕，首先启动zookeeper注册中心，然后启动服务提供者，再启动消费者，通过消费者路径访问/sayHello可检验是否成功。
 
 依赖spring-boot-starter-dubbo方式整合dubbo就简单多了，免去了一切xml配置的烦恼。
+
 1.同样的引入接口项目必不可少
 ```xml
         <dependency>
