@@ -20,9 +20,9 @@ public class DemoController {
     @Reference
     private DemoService demoService;
 
-    @RequestMapping(value="sayHello")
+    @RequestMapping(value = "sayHello")
     @ResponseBody
-    public String sayHello(HttpServletRequest request, HttpServletResponse response){
+    public String sayHello(HttpServletRequest request, HttpServletResponse response) {
         String string = "consumer : hello";
         System.out.println(string);
         string = string + "<br>" + demoService.sayHello("hello");

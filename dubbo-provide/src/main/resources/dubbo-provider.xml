@@ -19,5 +19,5 @@
     <bean id="demoService" class="com.lgd.dubboprovide.service.DemoServiceImpl" />-->
 
     <!-- 使用注解方式暴露接口 -->
-    <dubbo:annotation package="com.lgd.dubboprovide" />
+    <dubbo:annotation package="com.lgd.dubboprovide"/>
 </beans>
